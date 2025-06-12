@@ -1,11 +1,11 @@
 # Webtools Project
 
-This is a webtools project
+This is my webtools project from Git, GitHub, and VSC
 
 ## What it includes
 
 - Version control using Git and GitHub
-- A live website published with GitHub Pages
+- A website published with GitHub Pages
 - An organized development workflow using VS Code and Git
 
 ## Live Site
