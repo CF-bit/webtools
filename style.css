@@ -1,33 +1,20 @@
-/* Get rid of default spaces */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Make the background calming and text easy to read */
 body {
+  background-color: #d0f0c0; /* pale mint */
   font-family: Arial, sans-serif;
-  background-color: #a8dadc; /* light teal color */
-  color: #1d3557; /* dark blue text */
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
 }
 
-/* Make the top bar blue and text in the middle */
 header {
-  width: 100%;
-  background-color: #457b9d; /* medium blue */
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-  
-/* Big white title text */
-header h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
+  background-color: #1e88e5; /* blue header */
   color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
 }
