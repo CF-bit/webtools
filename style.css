@@ -1,34 +1,33 @@
+/* Get rid of default spaces */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make the background calming and text easy to read */
 body {
   font-family: Arial, sans-serif;
-  background: #e3f2fd;
-  color: #222;
-  padding: 20px;
-  text-align: center; /* centers all text by default */
+  background-color: #a8dadc; /* light teal color */
+  color: #1d3557; /* dark blue text */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-h1 {
-  color: #0d47a1;
-  margin-bottom: 30px;
+/* Make the top bar blue and text in the middle */
+header {
+  width: 100%;
+  background-color: #457b9d; /* medium blue */
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
-section {
-  background: white;
-  max-width: 700px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  text-align: left; /* reset text alignment inside sections */
-  color: #333;
-}
-
-footer {
-  color: #555;
-  font-size: 0.9rem;
-  margin-top: 40px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-  cursor: pointer;
+  
+/* Big white title text */
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
 }
