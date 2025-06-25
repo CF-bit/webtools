@@ -1,39 +1,30 @@
-/* Reset some default spacing */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #eef2f7;
-  color: #333;
-  line-height: 1.6;
+  background: #e3f2fd;
+  color: #222;
   padding: 20px;
+  text-align: center; /* centers all text by default */
 }
 
-/* Header styles */
-header {
-  background-color: #005f99;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
+h1 {
+  color: #0d47a1;
   margin-bottom: 30px;
 }
 
-header h1 {
-  font-size: 2rem;
+section {
+  background: white;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: left; /* reset text alignment inside sections */
+  color: #333;
 }
 
-/* Navigation styles */
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
+footer {
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 40px;
 }
 
-nav a:hover {
