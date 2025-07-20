@@ -19,3 +19,23 @@ section::after {
   display: table;
   clear: both;
 }
+/* Form Layout Enhancements */
+form {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Table Layout Enhancements */
+table {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
