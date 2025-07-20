@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us - Web Tools Project</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="layout.css">
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="layout.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <style>
+    /* Form Styling */
+    form[name="contact"] {
+      width: 65%;
+      margin: 30px auto;
+      padding: 20px;
+      border: 2px solid #1e88e5;
+      border-radius: 8px;
+      box-sizing: border-box;
+      background-color: #f9f9f9;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    legend {
+      font-weight: bold;
+      padding: 0 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .radio-group, .checkbox-group {
+      margin-bottom: 15px;
+    }
+    .radio-group label, .checkbox-group label {
+      display: inline-block;
+      margin-right: 15px;
+      font-weight: normal;
+    }
+    button {
+      padding: 10px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-right: 10px;
+      background-color: #1e88e5;
+      color: white;
+    }
+    button[type="reset"] {
+      background-color: #999;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -20,50 +83,73 @@
   <main>
     <section>
       <h2>Get in Touch</h2>
-      <form action="#" method="post">
-        <div>
-          <label for="name">Name:</label><br>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div>
-          <label for="email">Email:</label><br>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-          <label for="message">Message:</label><br>
+      <form name="contact" method="get" action="success.html">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
           <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <div>
-          <button type="submit">Send Message</button>
-        </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <div class="radio-group">
+            <label>Preferred Contact Method:</label>
+            <label><input type="radio" name="contactMethod" value="email" required /> Email</label>
+            <label><input type="radio" name="contactMethod" value="phone" /> Phone</label>
+          </div>
+
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="subscribe" value="newsletter" /> Subscribe to newsletter</label>
+          </div>
+
+          <label for="topic">Topic of Inquiry:</label>
+          <select id="topic" name="topic" required>
+            <option value="">-- Please choose an option --</option>
+            <option value="general">General Question</option>
+            <option value="support">Support</option>
+            <option value="feedback">Feedback</option>
+          </select>
+        </fieldset>
+
+        <button type="submit">Send Message</button>
+        <button type="reset">Reset</button>
       </form>
     </section>
 
     <section>
       <h2>Contact Information</h2>
-      <table>
+      <table style="width: 65%; margin: 0 auto; border-collapse: collapse; border: 1px solid #ccc;">
+        <caption>Team Contact Details</caption>
         <thead>
           <tr>
-            <th>Team Member</th>
-            <th>Email</th>
-            <th>Role</th>
+            <th scope="col" style="border: 1px solid #ccc; padding: 8px;">Team Member</th>
+            <th scope="col" style="border: 1px solid #ccc; padding: 8px;">Email</th>
+            <th scope="col" style="border: 1px solid #ccc; padding: 8px;">Role</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Ana R.</td>
-            <td>ana@example.com</td>
-            <td>Developer</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Ana R.</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">ana@example.com</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Developer</td>
           </tr>
           <tr>
-            <td>Jamal T.</td>
-            <td>jamal@example.com</td>
-            <td>Designer</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Jamal T.</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">jamal@example.com</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Designer</td>
           </tr>
           <tr>
-            <td>Priya K.</td>
-            <td>priya@example.com</td>
-            <td>Project Manager</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Priya K.</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">priya@example.com</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Project Manager</td>
           </tr>
         </tbody>
       </table>
