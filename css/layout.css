@@ -1,17 +1,25 @@
-img.float-left {
+img.float-left { 
   float: left;
   margin: 0 15px 15px 0;
-  width: 150px;
+  width: 250px;
   height: auto;
   border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 img.float-right {
   float: right;
   margin: 0 0 15px 15px;
-  width: 150px;
+  width: 250px;
   height: auto;
   border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 section::after {
@@ -19,7 +27,7 @@ section::after {
   display: table;
   clear: both;
 }
-/* Form Layout Enhancements */
+
 form {
   max-width: 500px;
   margin: 0 auto 30px;
@@ -27,7 +35,6 @@ form {
   text-align: left;
 }
 
-/* Table Layout Enhancements */
 table {
   width: 90%;
   margin: 0 auto;

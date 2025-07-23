@@ -1,5 +1,5 @@
 body {
-  background-color: #d0f0c0; /* pale mint */
+  background-color: #d0f0c0;
   font-family: Arial, sans-serif;
   color: #333;
   margin: 0;
@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  background-color: #1e88e5; /* blue header */
+  background-color: #1e88e5;
   color: white;
   padding: 20px;
   border-radius: 8px;
@@ -18,7 +18,7 @@ h1 {
   margin: 0;
   font-size: 2rem;
 }
-/* --- Contact Form Styles --- */
+
 form {
   max-width: 500px;
   margin: 0 auto 30px;
@@ -63,17 +63,19 @@ button[type="submit"]:hover {
   background-color: #1565c0;
 }
 
-/* --- Table Styles --- */
 table {
   width: 90%;
   margin: 0 auto;
   border-collapse: collapse;
   margin-top: 20px;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
   border: 1px solid #999;
-  padding: 10px;
+  padding: 12px;
   text-align: left;
 }
 
