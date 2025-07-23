@@ -1,13 +1,13 @@
-img.float-left { 
+img.float-left {
   float: left;
   margin: 0 15px 15px 0;
   width: 250px;
   height: auto;
   border-radius: 10px;
+  border: 2px solid #333;
   padding: 10px;
-  background-color: #fff;
-  border: 2px solid #ccc;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 
 img.float-right {
@@ -16,33 +16,14 @@ img.float-right {
   width: 250px;
   height: auto;
   border-radius: 10px;
+  border: 2px solid #333;
   padding: 10px;
-  background-color: #fff;
-  border: 2px solid #ccc;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 
 section::after {
   content: "";
   display: table;
   clear: both;
-}
-
-form {
-  max-width: 500px;
-  margin: 0 auto 30px;
-  padding: 20px;
-  text-align: left;
-}
-
-table {
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 20px;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 10px;
-  text-align: left;
 }
