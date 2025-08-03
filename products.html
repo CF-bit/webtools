@@ -89,12 +89,12 @@
       align-items: center;
       text-align: center;
     }
-    .product2 {
-      grid-column: 5 / span 3;
-      grid-row: 2;
-    }
     .product3 {
       grid-column: 1 / span 3;
+      grid-row: 2;
+    }
+    .product2 {
+      grid-column: 4 / span 3;
       grid-row: 2;
     }
     .product4, .product5, .product6 {
@@ -122,19 +122,21 @@
     }
     .product-card img, .featured img {
       width: 100%;
-      max-width: 280px;
-      max-height: 180px;
+      max-width: 200px;
+      max-height: 130px;
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 12px;
     }
-    h3 {
-      margin: 10px 0;
+    .product-card h3, .featured h3 {
+      margin: 10px 0 6px 0;
+      font-size: 1.2rem;
+      color: #1e88e5;
     }
-    p {
-      font-size: 0.9rem;
-      color: #333;
-      margin: 0 0 15px 0;
+    .product-card p, .featured p {
+      font-size: 0.95rem;
+      color: #444;
+      margin: 0;
     }
   </style>
 </head>
@@ -142,49 +144,46 @@
   <header>
     <h1>Our Products</h1>
   </header>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="team.html">Team</a>
     <a href="products.html">Products</a>
     <a href="contact.html">Contact</a>
   </nav>
-
   <main>
     <div class="products-grid">
-      <div class="featured">
-        <img src="images/product-featured.jpg" alt="Featured Product" />
-        <h3>Featured Product</h3>
-        <p>This is our standout product, offering exceptional quality, innovative features, and outstanding performance that sets it apart in the market.</p>
-      </div>
-      <div class="product3">
-        <img src="images/product2.jpg" alt="Product Two" />
-        <h3>Product Two</h3>
-        <p>A reliable choice combining functionality and affordability for everyday use.</p>
-      </div>
-      <div class="product2">
-        <img src="images/product3.jpg" alt="Product Three" />
-        <h3>Product Three</h3>
-        <p>Compact design with powerful features, ideal for on-the-go needs.</p>
-      </div>
-      <div class="product4">
-        <img src="images/product4.jpg" alt="Product Four" />
-        <h3>Product Four</h3>
-        <p>Designed for versatility and ease, perfect for a variety of applications.</p>
-      </div>
-      <div class="product5">
-        <img src="images/product5.jpg" alt="Product Five" />
-        <h3>Product Five</h3>
-        <p>High performance combined with a sleek design to boost productivity.</p>
-      </div>
-      <div class="product6">
-        <img src="images/product6.jpg" alt="Product Six" />
-        <h3>Product Six</h3>
-        <p>Affordable and durable, a dependable option for everyday challenges.</p>
-      </div>
+      <section class="featured">
+        <img src="images/product-featured.jpg" alt="Premium Wireless Headphones" />
+        <h3>Premium Wireless Headphones</h3>
+        <p>Experience unmatched sound clarity and comfort with our top-tier wireless headphones, designed for true audiophiles.</p>
+      </section>
+      <section class="product3">
+        <img src="images/product2.jpg" alt="Smart Fitness Tracker" />
+        <h3>Smart Fitness Tracker</h3>
+        <p>Monitor your health and activity seamlessly with our sleek and durable fitness tracker, featuring real-time stats.</p>
+      </section>
+      <section class="product2">
+        <img src="images/product3.jpg" alt="4K Action Camera" />
+        <h3>4K Action Camera</h3>
+        <p>Capture every adventure in stunning 4K resolution with our compact, waterproof action camera.</p>
+      </section>
+      <section class="product4">
+        <img src="images/product4.jpg" alt="Bluetooth Speaker" />
+        <h3>Bluetooth Speaker</h3>
+        <p>Enjoy rich, portable sound with long battery life and a rugged design built for all environments.</p>
+      </section>
+      <section class="product5">
+        <img src="images/product5.jpg" alt="Wireless Charging Pad" />
+        <h3>Wireless Charging Pad</h3>
+        <p>Keep your devices powered effortlessly with our sleek, fast wireless charging pad compatible with most smartphones.</p>
+      </section>
+      <section class="product6">
+        <img src="images/product6.jpg" alt="Noise-Cancelling Earbuds" />
+        <h3>Noise-Cancelling Earbuds</h3>
+        <p>Block out distractions and enjoy crystal-clear audio with our ergonomic noise-cancelling earbuds.</p>
+      </section>
     </div>
   </main>
-
   <footer>
     &copy; 2025 Web Tools Project. All rights reserved.
   </footer>
