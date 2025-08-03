@@ -3,185 +3,221 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Products - Web Tools Project</title>
+  <title>Our Products - Web Tools Project</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" />
   <style>
+    /* Define the page grid layout */
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
       display: grid;
-      grid-template-areas:
+      grid-template-areas: 
         "header"
         "nav"
         "main"
         "footer";
       grid-template-rows: auto auto 1fr auto;
       min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
+
     header {
       grid-area: header;
-      background: #1e88e5;
+      padding: 20px;
+      background-color: #1e88e5;
       color: white;
-      padding: 1rem;
       text-align: center;
     }
+
     nav {
       grid-area: nav;
-      background: #eee;
-      padding: 0.75rem;
-      text-align: center;
+      background-color: #1565c0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
     }
+
     nav a {
-      margin: 0 15px;
+      color: white;
       text-decoration: none;
-      color: #1e88e5;
-      font-weight: bold;
+      font-weight: 600;
+      padding: 8px 15px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
     }
     nav a:hover {
-      text-decoration: underline;
+      background-color: #0d3a72;
     }
+
     main {
       grid-area: main;
-      padding: 2rem;
+      padding: 30px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #eee;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Product grid styling */
+    .product-grid {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: auto auto auto;
-      grid-template-areas:
-        "featured featured featured featured . ."
-        "prod2 prod2 prod2 prod3 prod3 prod3"
-        "prod4 prod4 prod5 prod5 prod6 prod6";
+      grid-template-rows: repeat(3, auto);
       gap: 20px;
-      background: white;
-      max-width: 1200px;
-      margin: 1rem auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
-    .product-card {
-      background: #fff;
+
+    /* Grid areas for product cards using grid-column and grid-row */
+    .product-featured {
+      grid-column: 1 / span 4; /* spans 4 columns */
+      grid-row: 1 / 2;         /* first row */
+      background: #f0f8ff;
       padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .product-row2-1 {
+      grid-column: 5 / span 3; /* spans 3 columns (5,6,7 but we have only 6 columns? Adjust to 3/6) */
+      grid-row: 2 / 3;
+    }
+
+    .product-row2-2 {
+      grid-column: 1 / span 3; /* spans 3 columns */
+      grid-row: 2 / 3;
+    }
+
+    .product-row3-1 {
+      grid-column: 1 / span 2; /* spans 2 columns */
+      grid-row: 3 / 4;
+    }
+
+    .product-row3-2 {
+      grid-column: 3 / span 2;
+      grid-row: 3 / 4;
+    }
+
+    .product-row3-3 {
+      grid-column: 5 / span 2;
+      grid-row: 3 / 4;
+    }
+
+    /* Fix the grid placement: adjust row 2 spans */
+    .product-row2-1 {
+      grid-column: 4 / span 3; /* spans columns 4,5,6 */
+    }
+    .product-row2-2 {
+      grid-column: 1 / span 3; /* columns 1,2,3 */
+    }
+
+    /* Product card styles */
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 15px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      font-family: Arial, sans-serif;
     }
+
     .product-card img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
+      width: 100%;
+      max-height: 180px;
       object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 12px;
     }
-    .featured-product {
-      grid-area: featured;
-      padding: 30px;
-    }
-    .featured-product img {
-      max-height: 300px;
-    }
-    .featured-product h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-    .featured-product p {
-      font-size: 1.2rem;
-      line-height: 1.5;
-      color: #333;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .prod2 { grid-area: prod2; }
-    .prod3 { grid-area: prod3; }
-    .prod4 { grid-area: prod4; }
-    .prod5 { grid-area: prod5; }
-    .prod6 { grid-area: prod6; }
+
     .product-card h3 {
       margin: 10px 0 8px;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       color: #1e88e5;
     }
+
     .product-card p {
       font-size: 1rem;
-      color: #555;
+      color: #444;
+      line-height: 1.3;
+      flex-grow: 1;
     }
-    footer {
-      grid-area: footer;
-      background: #eee;
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    @media (max-width: 800px) {
-      main {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-          "featured featured"
-          "prod2 prod3"
-          "prod4 prod5"
-          "prod6 prod6";
-      }
-      .featured-product {
-        padding: 15px;
-      }
+
+    /* Larger description for featured product */
+    .product-featured p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #222;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Our Products</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="team.html">Meet the Team</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
-    </nav>
   </header>
 
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="team.html">Team</a>
+    <a href="products.html" aria-current="page">Products</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <main>
-    <div class="product-card featured-product">
-      <img src="images/product-featured.jpg" alt="Featured Product" />
-      <h2>Featured Product</h2>
-      <p>This premium product offers advanced features, exceptional quality, and outstanding value for professionals and enthusiasts alike.</p>
-    </div>
+    <div class="product-grid">
+      <!-- Featured Product -->
+      <div class="product-card product-featured">
+        <img src="images/product-featured.jpg" alt="Featured Product" />
+        <h3>Featured Product</h3>
+        <p>This flagship product offers the most advanced features and outstanding performance designed to meet all your needs.</p>
+      </div>
 
-    <div class="product-card prod2">
-      <img src="images/product2.jpg" alt="Product Two" />
-      <h3>Product Two</h3>
-      <p>A reliable choice for everyday use with durable build and consistent performance.</p>
-    </div>
+      <!-- Two products in second row -->
+      <div class="product-card product-row2-1">
+        <img src="images/product2.jpg" alt="Product Two" />
+        <h3>Product Two</h3>
+        <p>Reliable and efficient, Product Two is perfect for everyday use with a user-friendly interface.</p>
+      </div>
 
-    <div class="product-card prod3">
-      <img src="images/product3.jpg" alt="Product Three" />
-      <h3>Product Three</h3>
-      <p>Designed for professionals seeking high performance and precision.</p>
-    </div>
+      <div class="product-card product-row2-2">
+        <img src="images/product3.jpg" alt="Product Three" />
+        <h3>Product Three</h3>
+        <p>Compact and powerful, this product offers versatility and high-quality results in a sleek design.</p>
+      </div>
 
-    <div class="product-card prod4">
-      <img src="images/product4.jpg" alt="Product Four" />
-      <h3>Product Four</h3>
-      <p>Compact and portable design perfect for users on the go.</p>
-    </div>
+      <!-- Three products in third row -->
+      <div class="product-card product-row3-1">
+        <img src="images/product4.jpg" alt="Product Four" />
+        <h3>Product Four</h3>
+        <p>Affordable and easy to use, Product Four is designed to help beginners get started quickly.</p>
+      </div>
 
-    <div class="product-card prod5">
-      <img src="images/product5.jpg" alt="Product Five" />
-      <h3>Product Five</h3>
-      <p>Combining style and functionality to elevate your experience.</p>
-    </div>
+      <div class="product-card product-row3-2">
+        <img src="images/product5.jpg" alt="Product Five" />
+        <h3>Product Five</h3>
+        <p>With enhanced durability, Product Five withstands tough conditions without compromising performance.</p>
+      </div>
 
-    <div class="product-card prod6">
-      <img src="images/product6.jpg" alt="Product Six" />
-      <h3>Product Six</h3>
-      <p>An affordable and dependable option for everyday needs.</p>
+      <div class="product-card product-row3-3">
+        <img src="images/product6.jpg" alt="Product Six" />
+        <h3>Product Six</h3>
+        <p>Innovative and eco-friendly, Product Six offers smart solutions while being environmentally responsible.</p>
+      </div>
     </div>
   </main>
 
   <footer>
-    <p>© 2025 Web Tools Project</p>
+    &copy; 2025 Web Tools Project. All rights reserved.
   </footer>
 </body>
 </html>
