@@ -3,66 +3,238 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Our Products</title>
-  <link rel="stylesheet" href="path-to-your-css/layout.css" />
+  <title>Products - Web Tools Project</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    .page-container {
+      display: grid;
+      grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr auto;
+      gap: 10px;
+      min-height: 100vh;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 1100px;
+    }
+    header {
+      grid-area: header;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      grid-area: nav;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      background-color: #f1f1f1;
+    }
+    nav a {
+      text-decoration: none;
+      color: #1e88e5;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+    }
+    nav a:hover {
+      background-color: rgba(30, 136, 229, 0.1);
+    }
+    main {
+      grid-area: main;
+      padding: 20px;
+    }
+    footer {
+      grid-area: footer;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      background-color: #fafafa;
+      color: #555;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: auto;
+      gap: 20px;
+    }
+    .featured {
+      grid-column: 1 / span 4;
+      grid-row: 1;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .featured img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+    .featured h2 {
+      margin: 0 0 10px;
+    }
+    .featured p {
+      margin: 0 0 15px;
+      color: #444;
+      font-size: 1.1rem;
+    }
+
+    .row2a {
+      grid-column: 1 / span 3;
+      grid-row: 2;
+    }
+    .row2b {
+      grid-column: 4 / span 3;
+      grid-row: 2;
+    }
+    .row3a {
+      grid-column: 1 / span 2;
+      grid-row: 3;
+    }
+    .row3b {
+      grid-column: 3 / span 2;
+      grid-row: 3;
+    }
+    .row3c {
+      grid-column: 5 / span 2;
+      grid-row: 3;
+    }
+
+    .product-card {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .product-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product-card h3 {
+      margin: 8px 0 4px;
+    }
+    .product-card p {
+      margin: 0 0 10px;
+      color: #555;
+      flex-grow: 1;
+    }
+    .product-card .view-btn {
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.2s ease;
+    }
+    .product-card .view-btn:hover {
+      background-color: #1565c0;
+    }
+
+    @media (max-width: 1000px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .featured {
+        grid-column: 1 / -1;
+      }
+      .row2a, .row2b, .row3a, .row3b, .row3c {
+        grid-column: 1 / -1;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Our Products</h1>
+  <div class="page-container">
+    <header>
+      <h1>Our Products</h1>
+    </header>
     <nav>
       <a href="index.html">Home</a>
-      <!-- Add other links if needed -->
+      <a href="team.html">Meet the Team</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
     </nav>
-  </header>
 
-  <main>
-    <section class="product-grid">
-      <article class="product-card featured-product">
-        <img src="featured-product.jpg" alt="Featured Product" />
-        <h3>Product One</h3>
-        <p>This is a short description of product one.</p>
-        <button class="view-btn">View Product</button>
-      </article>
+    <main>
+      <div class="product-grid">
+        <div class="featured">
+          <img src="images/product-featured.jpg" alt="Featured Product" />
+          <h2>Featured Product</h2>
+          <p>Top-tier offering with premium performance and design.</p>
+          <a href="product1.html" class="view-btn">View Product</a>
+        </div>
 
-      <article class="product-card product-row-2">
-        <img src="product2.jpg" alt="Product Two" />
-        <h3>Product Two</h3>
-        <p>This is a short description of product two.</p>
-        <button class="view-btn">View Product</button>
-      </article>
+        <div class="product-card row2a">
+          <img src="images/product2.jpg" alt="Product Two" />
+          <h3>Product Two</h3>
+          <p>Reliable choice for everyday use.</p>
+          <a href="product2.html" class="view-btn">View Product</a>
+        </div>
 
-      <article class="product-card product-row-2">
-        <img src="product3.jpg" alt="Product Three" />
-        <h3>Product Three</h3>
-        <p>This is a short description of product three.</p>
-        <button class="view-btn">View Product</button>
-      </article>
+        <div class="product-card row2b">
+          <img src="images/product3.jpg" alt="Product Three" />
+          <h3>Product Three</h3>
+          <p>High performance for professionals.</p>
+          <a href="product3.html" class="view-btn">View Product</a>
+        </div>
 
-      <article class="product-card product-row-3">
-        <img src="product4.jpg" alt="Product Four" />
-        <h3>Product Four</h3>
-        <p>This is a short description of product four.</p>
-        <button class="view-btn">View Product</button>
-      </article>
+        <div class="product-card row3a">
+          <img src="images/product4.jpg" alt="Product Four" />
+          <h3>Product Four</h3>
+          <p>Compact and easy to carry.</p>
+          <a href="product4.html" class="view-btn">View Product</a>
+        </div>
 
-      <article class="product-card product-row-3">
-        <img src="product5.jpg" alt="Product Five" />
-        <h3>Product Five</h3>
-        <p>This is a short description of product five.</p>
-        <button class="view-btn">View Product</button>
-      </article>
+        <div class="product-card row3b">
+          <img src="images/product5.jpg" alt="Product Five" />
+          <h3>Product Five</h3>
+          <p>Designed for style and functionality.</p>
+          <a href="product5.html" class="view-btn">View Product</a>
+        </div>
 
-      <article class="product-card product-row-3">
-        <img src="product6.jpg" alt="Product Six" />
-        <h3>Product Six</h3>
-        <p>This is a short description of product six.</p>
-        <button class="view-btn">View Product</button>
-      </article>
-    </section>
-  </main>
+        <div class="product-card row3c">
+          <img src="images/product6.jpg" alt="Product Six" />
+          <h3>Product Six</h3>
+          <p>Affordable and dependable.</p>
+          <a href="product6.html" class="view-btn">View Product</a>
+        </div>
+      </div>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Your Company Name</p>
-  </footer>
+    <footer>
+      <p>© 2025 Web Tools Project</p>
+    </footer>
+  </div>
 </body>
 </html>
