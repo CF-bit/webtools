@@ -247,7 +247,18 @@ footer {
 
 .product-row-3 {
   grid-row: 3;
-  grid-column: auto / span 2;
+}
+
+.product-row-3:nth-child(5) {
+  grid-column: 1 / span 2;
+}
+
+.product-row-3:nth-child(6) {
+  grid-column: 3 / span 2;
+}
+
+.product-row-3:nth-child(7) {
+  grid-column: 5 / span 2;
 }
 
 .product-card {
@@ -264,4 +275,33 @@ footer {
   height: auto;
   border-radius: 8px;
   margin-bottom: 10px;
+}
+
+.view-btn {
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.view-btn:hover {
+  background-color: #1565c0;
+}
+
+@media (max-width: 1000px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-product,
+  .product-row-2,
+  .product-row-3 {
+    grid-column: 1 / -1 !important;
+  }
 }
