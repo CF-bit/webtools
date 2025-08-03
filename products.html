@@ -63,13 +63,11 @@
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(3, auto);
-      grid-template-areas:
-        "featured featured featured featured product2 product3"
-        "product4 product4 product5 product5 product6 product6"
-        "product7 product8 product9 product10 product11 product12";
       gap: 20px;
     }
-    .product-card {
+    .featured {
+      grid-column: 1 / span 4;
+      grid-row: 1;
       background: white;
       border: 1px solid #ccc;
       border-radius: 10px;
@@ -80,39 +78,49 @@
       align-items: center;
       text-align: center;
     }
-    .featured {
-      grid-column: 1 / span 4;
-      grid-row: 1;
+    .product2, .product3 {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
     .product2 {
-      grid-column: 5 / span 1;
-      grid-row: 1;
+      grid-column: 5 / span 3;
+      grid-row: 2;
     }
     .product3 {
-      grid-column: 6 / span 1;
-      grid-row: 1;
-    }
-    .product4 {
       grid-column: 1 / span 3;
       grid-row: 2;
     }
-    .product5 {
-      grid-column: 4 / span 3;
-      grid-row: 2;
+    .product4, .product5, .product6 {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-    .product6 {
+    .product4 {
       grid-column: 1 / span 2;
       grid-row: 3;
     }
-    .product7 {
+    .product5 {
       grid-column: 3 / span 2;
       grid-row: 3;
     }
-    .product8 {
+    .product6 {
       grid-column: 5 / span 2;
       grid-row: 3;
     }
-    .product-card img {
+    .product-card img, .featured img {
       width: 100%;
       max-width: 280px;
       max-height: 180px;
@@ -120,7 +128,7 @@
       border-radius: 8px;
       margin-bottom: 12px;
     }
-    h1, h2, h3 {
+    h3 {
       margin: 10px 0;
     }
     p {
@@ -144,45 +152,35 @@
 
   <main>
     <div class="products-grid">
-      <div class="product-card featured">
+      <div class="featured">
         <img src="images/product-featured.jpg" alt="Featured Product" />
         <h3>Featured Product</h3>
         <p>This is our standout product, offering exceptional quality, innovative features, and outstanding performance that sets it apart in the market.</p>
       </div>
-      <div class="product-card product2">
+      <div class="product3">
         <img src="images/product2.jpg" alt="Product Two" />
         <h3>Product Two</h3>
         <p>A reliable choice combining functionality and affordability for everyday use.</p>
       </div>
-      <div class="product-card product3">
+      <div class="product2">
         <img src="images/product3.jpg" alt="Product Three" />
         <h3>Product Three</h3>
         <p>Compact design with powerful features, ideal for on-the-go needs.</p>
       </div>
-      <div class="product-card product4">
+      <div class="product4">
         <img src="images/product4.jpg" alt="Product Four" />
         <h3>Product Four</h3>
         <p>Designed for versatility and ease, perfect for a variety of applications.</p>
       </div>
-      <div class="product-card product5">
+      <div class="product5">
         <img src="images/product5.jpg" alt="Product Five" />
         <h3>Product Five</h3>
         <p>High performance combined with a sleek design to boost productivity.</p>
       </div>
-      <div class="product-card product6">
+      <div class="product6">
         <img src="images/product6.jpg" alt="Product Six" />
         <h3>Product Six</h3>
         <p>Affordable and durable, a dependable option for everyday challenges.</p>
-      </div>
-      <div class="product-card product7">
-        <img src="images/product7.jpg" alt="Product Seven" />
-        <h3>Product Seven</h3>
-        <p>Innovative technology meets user-friendly interface for great usability.</p>
-      </div>
-      <div class="product-card product8">
-        <img src="images/product8.jpg" alt="Product Eight" />
-        <h3>Product Eight</h3>
-        <p>Engineered for efficiency with eco-friendly materials and design.</p>
       </div>
     </div>
   </main>
