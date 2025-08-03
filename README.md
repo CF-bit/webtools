@@ -1,12 +1,14 @@
 # Webtools Project
 
-This is my webtools project from Git, GitHub, and VSC
+This is my Webtools project using Git, GitHub, and Visual Studio Code.
 
 ## What it includes
 
-- Version control using Git and GitHub
-- A website published with GitHub Pages
-- An organized development workflow using VS Code and Git
+- Version control with Git and GitHub  
+- Website published via GitHub Pages  
+- Organized development workflow using VS Code and Git  
+- Multiple pages including Home, Team, Products, and Contact  
+- Responsive design using CSS Grid and Flexbox  
 
 ## Live Site
 
