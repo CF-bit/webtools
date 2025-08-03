@@ -184,8 +184,6 @@ caption {
   }
 }
 
-/* PRODUCTS PAGE LAYOUT */
-
 .page-container {
   display: grid;
   grid-template-areas:
@@ -304,4 +302,12 @@ footer {
   .product-row-3 {
     grid-column: 1 / -1 !important;
   }
+}
+
+#products {
+  display: none;
+}
+
+#products:target {
+  display: block;
 }
