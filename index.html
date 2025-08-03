@@ -46,48 +46,6 @@
       gap: 20px;
       margin-bottom: 30px;
     }
-    #products .product-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    #products .product-card {
-      border: 1px solid #ccc;
-      padding: 15px;
-      border-radius: 8px;
-      width: 280px;
-      text-align: center;
-      background: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    #products .product-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-    #products .product-card a.button-link {
-      margin-top: auto;
-      background-color: #1e88e5;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-    }
-    #products .product-card a.button-link:hover {
-      background-color: #1565c0;
-    }
-
-    /* hide products section unless targeted */
-    #products { display: none; }
-    #products:target { display: block; }
   </style>
 </head>
 <body>
@@ -97,7 +55,7 @@
       <a href="#team">Team</a>
       <a href="#tools">Tools</a>
       <a href="#project">Project</a>
-      <a href="#products">Products</a>
+      <a href="products.html">Products</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
@@ -233,51 +191,25 @@
         website.
       </p>
     </section>
-
-    <section id="products" style="margin-top: 40px;">
-      <h2>Our Products</h2>
-      <div class="product-list">
-        <div class="product-card">
-          <img src="images/product-featured.jpg" alt="Featured Product" />
-          <h3>Product One</h3>
-          <p>This is a short description of product one.</p>
-          <a href="product1.html" class="button-link">View Product</a>
-        </div>
-        <div class="product-card">
-          <img src="images/product2.jpg" alt="Product Two" />
-          <h3>Product Two</h3>
-          <p>This is a short description of product two.</p>
-          <a href="product2.html" class="button-link">View Product</a>
-        </div>
-        <div class="product-card">
-          <img src="images/product3.jpg" alt="Product Three" />
-          <h3>Product Three</h3>
-          <p>This is a short description of product three.</p>
-          <a href="product3.html" class="button-link">View Product</a>
-        </div>
-        <div class="product-card">
-          <img src="images/product4.jpg" alt="Product Four" />
-          <h3>Product Four</h3>
-          <p>This is a short description of product four.</p>
-          <a href="product4.html" class="button-link">View Product</a>
-        </div>
-        <div class="product-card">
-          <img src="images/product5.jpg" alt="Product Five" />
-          <h3>Product Five</h3>
-          <p>This is a short description of product five.</p>
-          <a href="product5.html" class="button-link">View Product</a>
-        </div>
-        <div class="product-card">
-          <img src="images/product6.jpg" alt="Product Six" />
-          <h3>Product Six</h3>
-          <p>This is a short description of product six.</p>
-          <a href="product6.html" class="button-link">View Product</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <div style="text-align: center; margin-top: 40px;">
+    <a href="products.html">
+      <button
+        style="
+          padding: 10px 20px;
+          font-size: 1rem;
+          border: none;
+          border-radius: 8px;
+          background-color: #1e88e5;
+          color: white;
+          cursor: pointer;
+          margin-right: 15px;
+        "
+      >
+        Products
+      </button>
+    </a>
     <a href="contact.html">
       <button
         style="
