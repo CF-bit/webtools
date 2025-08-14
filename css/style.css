@@ -169,3 +169,15 @@ tr:nth-child(even) {
     max-width: 90%;
   }
 }
+#about-section { 
+  display: none; 
+  max-width: 1000px; 
+  margin: 40px auto; 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  align-items: center; 
+}
+#about-section:target { 
+  display: flex; 
+}
