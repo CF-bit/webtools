@@ -1,16 +1,19 @@
-# Webtools Project
+# My Portfolio Website
 
-This is my Webtools project using Git, GitHub, and Visual Studio Code.
+This project was created for the Launch Studio course.  
+It showcases my skills in HTML, CSS, W3.CSS, and responsive design.
 
-## What it includes
+## Pages
+- **Home:** Introduction and main landing page
+- **About:** Personal background, skills, and goals
+- **Contact:** Accessible form for inquiries
 
-- Version control with Git and GitHub  
-- Website published via GitHub Pages  
-- Organized development workflow using VS Code and Git  
-- Multiple pages including Home, Team, Products, and Contact  
-- Responsive design using CSS Grid and Flexbox  
+## Tools Learned
+- HTML5 & CSS3
+- W3.CSS Framework
+- Git & GitHub
+- Accessibility best practices
 
-## Live Site
-
-You can visit the site here:  
+## Reflection
+This course helped me build a professional web presence...
 https://CF-bit.github.io/webtools/

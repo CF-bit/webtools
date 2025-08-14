@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us - Web Tools Project</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
@@ -70,33 +71,34 @@
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Contact Us</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="contact.html">Contact</a>
+<body class="w3-light-grey">
+
+  <header class="w3-container w3-blue w3-padding-16">
+    <h1 class="w3-center">Contact Us</h1>
+    <nav class="w3-center w3-margin-top">
+      <a href="index.html" class="w3-button w3-white w3-round w3-margin-right">Home</a>
+      <a href="contact.html" class="w3-button w3-white w3-round">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Get in Touch</h2>
-      <form name="contact" method="get" action="success.html">
-        <fieldset>
+  <main class="w3-container">
+    <section class="w3-card w3-white w3-round-large w3-padding-large w3-margin-top">
+      <h2 class="w3-text-blue">Get in Touch</h2>
+      <form name="contact" method="get" action="success.html" class="w3-animate-opacity">
+        <fieldset class="w3-margin-bottom">
           <legend>Personal Information</legend>
 
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" class="w3-input w3-border" required />
 
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" class="w3-input w3-border" required />
 
           <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="5" class="w3-input w3-border" required></textarea>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="w3-margin-bottom">
           <legend>Preferences</legend>
 
           <div class="radio-group">
@@ -110,7 +112,7 @@
           </div>
 
           <label for="topic">Topic of Inquiry:</label>
-          <select id="topic" name="topic" required>
+          <select id="topic" name="topic" class="w3-select w3-border" required>
             <option value="">-- Please choose an option --</option>
             <option value="general">General Question</option>
             <option value="support">Support</option>
@@ -118,10 +120,11 @@
           </select>
         </fieldset>
 
-        <button type="submit">Send Message</button>
-        <button type="reset">Reset</button>
+        <button type="submit" class="w3-button w3-blue w3-round-large">Send Message</button>
+        <button type="reset" class="w3-button w3-grey w3-round-large">Reset</button>
       </form>
     </section>
   </main>
+
 </body>
 </html>
